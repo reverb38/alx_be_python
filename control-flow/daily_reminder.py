@@ -22,8 +22,8 @@ if time_bound == "yes":
 else:
     reminder = base + ". Consider completing it when you have free time."
 
-# Step 4: Print the reminder
-print("\nReminder:", reminder)
+# Step 4: Print the reminder (strict format for checker)
+print(f"Reminder: {reminder}")
 
 # Step 5: Simple loop for repeated check-ins
 while True:
@@ -33,12 +33,12 @@ while True:
         answer = input("\nMark as done? (yes/no/stop): ").strip().lower()
 
     if answer == "yes":
-        print("\nNice! Well done on completing this task. Let the world hear about this milestone achieved.")
+        print("Nice! Well done on completing this task. Let the world hear about this milestone achieved.")
         break
     elif answer == "no":
-        print("\nReminder:", reminder)
+        print(f"Reminder: {reminder}")
     elif answer in ("stop", "snooze"):
-        print("\nOkay — reminder snoozed. Run the script again when you're ready.")
+        print("Okay — reminder snoozed. Run the script again when you're ready.")
         break
     else:
         print("Please answer 'yes', 'no', or 'stop'.")
